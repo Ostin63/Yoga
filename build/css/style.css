@@ -1,0 +1,129 @@
+/*@font-face {
+  font-family: "Open Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("Open Sans Bold"),
+    local("OpenSans-Bold"),
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+}*/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@-webkit-keyframes animCloud {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes animCloud {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+.cloud {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: url(../img/cloud-bg.jpg);
+  background-size: cover;
+}
+.cloud img {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+@keyframes animCloud {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+.cloud1 {
+  -webkit-animation: animCloud 20s infinite linear;
+          animation: animCloud 20s infinite linear;
+}
+.cloud2 {
+  -webkit-animation: animCloud 40s infinite linear;
+          animation: animCloud 40s infinite linear;
+}
+.cloud3 {
+  -webkit-animation: animCloud 60s infinite linear;
+          animation: animCloud 60s infinite linear;
+}
+.cloud4 {
+  -webkit-animation: animCloud 80s infinite linear;
+          animation: animCloud 80s infinite linear;
+}
+.main-header {
+  width: 100%;
+  height: 908px;
+}
+h1 {
+  font-family: Geometria;
+  font-size: 265px;
+  letter-spacing: 0.34em;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 50px rgba(131, 115, 161, 0.6);
+}
+@media (min-width: 764px) {
+  .container {
+    width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1456px;
+    padding: 0 130px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
