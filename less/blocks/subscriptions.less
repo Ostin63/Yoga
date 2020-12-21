@@ -1,0 +1,78 @@
+.subscriptions {
+  margin-top: 70px;
+  background: @color-bg-lilac;
+  background: url(../img/subscriptions-bg-320.png) 50% 0 no-repeat;
+}
+
+.subscriptions-block {
+  text-align: center;
+}
+
+.menu-subscriptions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  .date {
+    display: block;
+    color: @color-red;
+  }
+}
+
+.timetable {
+  margin-top: 35px;
+
+  li {
+    width: 250px;
+    height: 199px;
+    margin-top: 30px;
+    padding: 30px 51px;
+    background: @color-white;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    box-sizing: border-box;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      width: 135px;
+      font-size: 18px;
+      line-height: 20px;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      &:nth-child(2) {
+        font-size: 10px;
+        line-height: 15px;
+        color: @color-red;
+      }
+
+    }
+
+    .btn {
+      width: 148px;
+      height: 34px;
+      color: @color-white;
+    }
+
+    &:nth-child(1) {
+      p {
+        &:nth-child(2) {
+          width: 77px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      p {
+        &:nth-child(2) {
+          width: 79px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

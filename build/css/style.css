@@ -14,7 +14,8 @@ h2 {
   font-size: 18px;
 }
 h3 {
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 20px;
 }
 img {
   display: block;
@@ -56,6 +57,22 @@ button {
   padding: 0;
   outline: none;
   border: none;
+}
+.btn {
+  display: block;
+  background: #8E80A9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Geometria", sans-serif;
+}
+.btn:hover {
+  background: #E65C7B;
+  -webkit-box-shadow: 0px 0px 6px 0px #8B7EAC;
+          box-shadow: 0px 0px 6px 0px #8B7EAC;
+}
+.btn:active {
+  -webkit-box-shadow: 0px 0px 1px 0px #8B7EAC;
+          box-shadow: 0px 0px 1px 0px #8B7EAC;
 }
 @-webkit-keyframes animCloud {
   from {
@@ -309,22 +326,73 @@ button {
   width: 43px;
   height: 115px;
   padding-top: 52px;
-  display: block;
-  background: #8E80A9;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.rec:hover {
-  background: #E65C7B;
-  -webkit-box-shadow: 0px 0px 6px 0px #8B7EAC;
-          box-shadow: 0px 0px 6px 0px #8B7EAC;
-}
-.rec:active {
-  -webkit-box-shadow: 0px 0px 1px 0px #8B7EAC;
-          box-shadow: 0px 0px 1px 0px #8B7EAC;
 }
 .block-cart-button {
   display: none;
+}
+.subscriptions {
+  margin-top: 70px;
+  background: #FCF8FE;
+  background: url(../img/subscriptions-bg-320.png) 50% 0 no-repeat;
+}
+.subscriptions-block {
+  text-align: center;
+}
+.menu-subscriptions {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu-subscriptions .date {
+  display: block;
+  color: #E65C7B;
+}
+.timetable {
+  margin-top: 35px;
+}
+.timetable li {
+  width: 250px;
+  height: 199px;
+  margin-top: 30px;
+  padding: 30px 51px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+          box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.timetable li h3 {
+  margin: 0;
+}
+.timetable li p {
+  width: 135px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.timetable li p:nth-child(2) {
+  font-size: 10px;
+  line-height: 15px;
+  color: #E65C7B;
+}
+.timetable li .btn {
+  width: 148px;
+  height: 34px;
+  color: #FFFFFF;
+}
+.timetable li:nth-child(1) p:nth-child(2) {
+  width: 77px;
+  margin: 0 auto;
+}
+.timetable li:nth-child(3) p:nth-child(2) {
+  width: 79px;
+  margin: 0 auto;
 }
 @media (min-width: 764px) {
   .container {

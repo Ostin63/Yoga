@@ -10,7 +10,8 @@ h2 {
 }
 
 h3 {
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 img {
@@ -44,6 +45,22 @@ button {
   padding: 0;
   outline: none;
   border: none;
+}
+
+.btn {
+  display: block;
+  background: @color-lilac;
+  box-sizing: border-box;
+  font-family: "Geometria", sans-serif;
+
+  &:hover {
+    background: @color-red;
+    box-shadow: 0px 0px 6px 0px @color-light-lilac;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 1px 0px @color-light-lilac;
+  }
 }
 
 @keyframes animCloud {

@@ -87,8 +87,8 @@
       <div class="container">
         <div class="directions-block">
           <h2>Направления</h2>
-          <ul class="block-cart">
-            <li class="directions-cart">
+          <div class="block-cart">
+            <div class="directions-cart">
               <picture>
                 <source media="(min-width: 1456px)" srcset="img/directions-img-1-1456.jpg">
                 <source media="(min-width: 768px)" srcset="img/directions-img-1-768.jpg">
@@ -101,14 +101,14 @@
                   <p>Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00</p>
                   <p>Инструктор <span>Емельянова Полина</span></p>
                 </div>
-                <a class="rec rec-one" href="#">
+                <a class="rec rec-one btn" href="#">
                   <svg width="7" height="11" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L5 5L1 9" stroke="white" />
                   </svg>
                 </a>
               </div>
-            </li>
-            <li class="directions-cart">
+            </div>
+            <div class="directions-cart">
               <picture>
                 <source media="(min-width: 1456px)" srcset="img/directions-img-2-1456.jpg">
                 <source media="(min-width: 768px)" srcset="img/directions-img-2-768.jpg">
@@ -121,14 +121,14 @@
                   <p>Пн, Ср, Пт – с 11:00 до 14:00 Вт, Чт – с 19:00 до 21:00</p>
                   <p>Инструктор <span>Емельянова Полина</span></p>
                 </div>
-                <a class="rec" href="#">
+                <a class="rec btn" href="#">
                   <svg width="7" height="11" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L5 5L1 9" stroke="white" />
                   </svg>
                 </a>
               </div>
-            </li>
-            <li class="directions-cart">
+            </div>
+            <div class="directions-cart">
               <picture>
                 <source media="(min-width: 1456px)" srcset="img/directions-img-3-1456.jpg">
                 <source media="(min-width: 768px)" srcset="img/directions-img-3-768.jpg">
@@ -141,49 +141,52 @@
                   <p>Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00</p>
                   <p>Инструктор <span>Емельянова Полина</span></p>
                 </div>
-                <a class="rec" href="#">
+                <a class="rec btn" href="#">
                   <svg width="7" height="11" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L5 5L1 9" stroke="white" />
                   </svg>
                 </a>
               </div>
-            </li>
-            <li class="li-button">
+            </div>
+            <div class="li-button">
               <button class="block-cart-button">Смотреть больше</button>
-            </li>
-          </ul>
-          
+            </div>
+          </div>
         </div>
       </div>
       <p class="counter">02</p>
     </section>
     <section class="subscriptions">
-      <h2>Абонементы</h2>
-      <ul class="menu-subscriptions">
-        <li><a href="#">1 месяц</a></li>
-        <li><a href="#">6 месяцев</a></li>
-        <li><a href="#"></a>12 месяцев</li>
-      </ul>
-      <ul>
-        <li>
-          <h3>Утро</h3>
-          <p>Посещение с 11:00 до 16:00</p>
-          <p>1 300 Р</p>
-          <button>Заказать абонемент</button>
-        </li>
-        <li>
-          <h3>Безлимит</h3>
-          <p>Посещение не ограничено по времени</p>
-          <p>2 800 Р</p>
-          <button>Заказать абонемент</button>
-        </li>
-        <li>
-          <h3>Вечер</h3>
-          <p>Посещение с 17:00 до 21:00</p>
-          <p>2 000 Р</p>
-          <button>Заказать абонемент</button>
-        </li>
-      </ul>
+      <div class="container">
+        <div class="subscriptions-block">
+          <h2>Абонементы</h2>
+          <ul class="menu-subscriptions">
+            <li><a class="date" href="#">1 месяц</a></li>
+            <li><a class="date" href="#">6 месяцев</a></li>
+            <li><a class="date" href="#">12 месяцев</a></li>
+          </ul>
+          <ul class="timetable">
+            <li class="morning">
+              <h3>Утро</h3>
+              <p>Посещение с&nbsp;11:00 до 16:00</p>
+              <p>1 300 Р</p>
+              <button class="btn">Заказать абонемент</button>
+            </li>
+            <li class="unlimited">
+              <h3>Безлимит</h3>
+              <p>Посещение не ограничено по времени</p>
+              <p>2 800 Р</p>
+              <button class="btn">Заказать абонемент</button>
+            </li>
+            <li class="evening">
+              <h3>Вечер</h3>
+              <p>Посещение с&nbsp;17:00 до 21:00</p>
+              <p>2 000 Р</p>
+              <button class="btn">Заказать абонемент</button>
+            </li>
+          </ul>
+        </div>
+      </div>
       <p class="counter">03</p>
     </section>
     <section class="our-team">
