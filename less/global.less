@@ -1,6 +1,16 @@
 body {
+  font-size: 10px;
+  line-height: 15px;
   color: @color-lilac;
-  font-family: "Geometria"sans-serif;
+  font-family: "Geometria", sans-serif;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 12px;
 }
 
 img {
@@ -18,8 +28,22 @@ img {
 .container {
   .container()
 }
+
+ul {
+  .ul-reset()
+}
+
 a {
+  display: block;
   text-decoration: none;
+  box-sizing: border-box;
+}
+
+button {
+  background: rgba(255, 255, 255, 0);
+  padding: 0;
+  outline: none;
+  border: none;
 }
 
 @keyframes animCloud {
@@ -29,5 +53,19 @@ a {
 
   to {
     transform: translateX(-100%);
+  }
+}
+
+@media @tablet-widths {
+  body {
+    font-size: 12px;
+    line-height: 10px;
+  }
+}
+
+@media @desktop-widths {
+  body {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
