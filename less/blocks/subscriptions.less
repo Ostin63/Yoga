@@ -1,10 +1,19 @@
 .subscriptions {
-  margin-top: 70px;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 5px;
   background: @color-bg-lilac;
-  background: url(../img/subscriptions-bg-320.png) 50% 0 no-repeat;
+}
+
+.background-subscriptions {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  right: 0;
 }
 
 .subscriptions-block {
+  position: relative;
   text-align: center;
 }
 
@@ -85,12 +94,17 @@
   .subscriptions {
     width: 100%;
     height: 397px;
-    background: url(../img/subscriptions-bg-768.png) 50% 0 no-repeat;
+    padding-top: 120px;
+  }
+
+  .background-subscriptions {
+    top: 25%;
   }
 
   .menu-subscriptions {
     width: 241px;
     margin: 0 auto;
+    margin-top: 25px;
   }
 
   .timetable {
@@ -127,21 +141,29 @@
   .subscriptions {
     width: 100%;
     height: 836px;
-    background: url(../img/subscriptions-bg-1456.png) 50% 0 no-repeat;
+    padding-top: 154px;
+  }
+
+  .background-subscriptions {
+    top: 0;
   }
 
   .menu-subscriptions {
     width: 286px;
+    margin-top: 54px;
   }
 
   .timetable {
     width: 931px;
     margin: 0 auto;
+    margin-top: 40px;
 
     li {
       width: 263px;
       height: 237px;
+      margin-top: 0;
       padding-top: 58px;
+      transition: 1s;
 
       p {
         &:nth-child(3) {

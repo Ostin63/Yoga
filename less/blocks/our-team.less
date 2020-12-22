@@ -1,0 +1,177 @@
+.our-team {
+  padding-top: 55px;
+  padding-bottom: 5px;
+  background: @color-bg-lilac;
+
+  .red {
+    color: @color-red;
+  }
+}
+
+.teams {
+  text-align: center;
+}
+
+.cart-team {
+  width: 230px;
+  height: 82px;
+  margin-left: 10px;
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
+  display: flex;
+  box-sizing: border-box;
+
+  .img {
+    width: 82px;
+    height: 82px;
+  }
+
+  .cart-name {
+    width: 146px;
+    height: 82px;
+    padding-top: 15px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: @color-white;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    box-sizing: border-box;
+
+    p {
+      width: 75px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    .social {
+      p {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.name-info {
+  h3 {
+    display: none;
+  }
+}
+
+.slider-teams {
+  position: relative;
+
+  .slick-arrow {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 31px;
+    top: 75px;
+    box-sizing: border-box;
+    border: 1px solid @color-lilac;
+    font-size: 0;
+    z-index: 2;
+  }
+
+  .slick-prev {
+    right: -15px;
+    background: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='%238E80A9'/%3E%3C/svg%3E") 50% 50% no-repeat;
+
+    &:hover {
+      background-color: @color-lilac;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='white'/%3E%3C/svg%3E");
+      box-shadow: 0px 0px 6px 0px @color-light-lilac
+    }
+
+    &:active {
+      box-shadow: 0px 0px 1px 0px @color-light-lilac;
+    }
+  }
+
+  .slick-next {
+    left: -15px;
+    background: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8L1 4.5L5 1' stroke='%238E80A9'/%3E%3C/svg%3E") 50% 50% no-repeat;
+
+    &:hover {
+      background-color: @color-lilac;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8L1 4.5L5 1' stroke='white'/%3E%3C/svg%3E");
+    }
+
+    &:active {
+      box-shadow: 0px 0px 1px 0px @color-light-lilac;
+    }
+  }
+
+}
+
+@media @tablet-widths {
+  .block-slider {
+    width: 628px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .name-info {
+    margin: 0 auto;
+    margin-top: 20px;
+
+    h3 {
+      display: block;
+    }
+
+    .info-text {
+      width: 290px;
+      text-align: center;
+    }
+  }
+
+  .cart-team {
+    position: relative;
+    width: 270px;
+    margin-top: 20px;
+
+    img {
+      width: 92px;
+      height: 92px;
+    }
+
+    .cart-name {
+      position: absolute;
+      width: 255px;
+      height: 87px;
+      top: 15px;
+      left: 35px;
+      padding-left: 84px;
+      z-index: -1;
+      box-sizing: border-box;
+    }
+  }
+
+  .slider-teams {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 60px;
+
+    .slick-arrow {
+      width: 30px;
+      height: 20px;
+      top: 400px;
+    }
+
+    .slick-prev {
+      right: 0;
+    }
+
+    .slick-next {
+      left: 200px;
+    }
+
+  }
+
+  .liler-info {
+    width: 311px;
+  }
+}

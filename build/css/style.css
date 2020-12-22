@@ -64,6 +64,8 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Geometria", sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .btn:hover {
   background: #E65C7B;
@@ -238,6 +240,8 @@ button {
   background: #E65C7B;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .header-button a:hover {
   background: #8B7EAC;
@@ -262,9 +266,15 @@ button {
   display: none;
 }
 .directions {
+  position: relative;
   margin-top: -36px;
+  padding-bottom: 20px;
   background: #FCF8FE;
-  background: url(../img/directions-bg-320.png) 0 50% no-repeat;
+}
+.background-directions {
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 .directions-block {
   position: relative;
@@ -301,7 +311,7 @@ button {
   -webkit-box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
           box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
 }
-.info {
+.block-info .info {
   width: 207px;
   height: 115px;
   padding: 15px 40px 15px 15px;
@@ -310,14 +320,14 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.info h3 {
+.block-info .info h3 {
   margin: 0;
 }
-.info p {
+.block-info .info p {
   margin: 0;
   margin-top: 5px;
 }
-.info p:last-child {
+.block-info .info p:last-child {
   width: 102px;
   text-align: left;
   color: #E65C7B;
@@ -331,11 +341,19 @@ button {
   display: none;
 }
 .subscriptions {
-  margin-top: 70px;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 5px;
   background: #FCF8FE;
-  background: url(../img/subscriptions-bg-320.png) 50% 0 no-repeat;
+}
+.background-subscriptions {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  right: 0;
 }
 .subscriptions-block {
+  position: relative;
   text-align: center;
 }
 .menu-subscriptions {
@@ -398,6 +416,108 @@ button {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.our-team {
+  padding-top: 55px;
+  padding-bottom: 5px;
+  background: #FCF8FE;
+}
+.our-team .red {
+  color: #E65C7B;
+}
+.teams {
+  text-align: center;
+}
+.cart-team {
+  width: 230px;
+  height: 82px;
+  margin-left: 10px;
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cart-team .img {
+  width: 82px;
+  height: 82px;
+}
+.cart-team .cart-name {
+  width: 146px;
+  height: 82px;
+  padding-top: 15px;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+          box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cart-team .cart-name p {
+  width: 75px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.cart-team .cart-name .social p {
+  width: 20px;
+}
+.name-info h3 {
+  display: none;
+}
+.slider-teams {
+  position: relative;
+}
+.slider-teams .slick-arrow {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 31px;
+  top: 75px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #8E80A9;
+  font-size: 0;
+  z-index: 2;
+}
+.slider-teams .slick-prev {
+  right: -15px;
+  background: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='%238E80A9'/%3E%3C/svg%3E") 50% 50% no-repeat;
+}
+.slider-teams .slick-prev:hover {
+  background-color: #8E80A9;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='white'/%3E%3C/svg%3E");
+  -webkit-box-shadow: 0px 0px 6px 0px #8B7EAC;
+          box-shadow: 0px 0px 6px 0px #8B7EAC;
+}
+.slider-teams .slick-prev:active {
+  -webkit-box-shadow: 0px 0px 1px 0px #8B7EAC;
+          box-shadow: 0px 0px 1px 0px #8B7EAC;
+}
+.slider-teams .slick-next {
+  left: -15px;
+  background: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8L1 4.5L5 1' stroke='%238E80A9'/%3E%3C/svg%3E") 50% 50% no-repeat;
+}
+.slider-teams .slick-next:hover {
+  background-color: #8E80A9;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8L1 4.5L5 1' stroke='white'/%3E%3C/svg%3E");
+}
+.slider-teams .slick-next:active {
+  -webkit-box-shadow: 0px 0px 1px 0px #8B7EAC;
+          box-shadow: 0px 0px 1px 0px #8B7EAC;
+}
 @media (min-width: 764px) {
   .container {
     width: 768px;
@@ -416,8 +536,8 @@ button {
     line-height: 15px;
   }
   h3 {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .cloud {
     height: 484px;
@@ -515,11 +635,6 @@ button {
   }
   .directions {
     margin-top: -36px;
-    background: none;
-    background: #8b7eac;
-    background: -webkit-gradient(linear, left top, right top, color-stop(100%, rgba(139, 126, 172, 0.58026961)), color-stop(100%, #ffffff), to(#e65c7b));
-    background: linear-gradient(90deg, rgba(139, 126, 172, 0.58026961) 100%, #ffffff 100%, #e65c7b 100%);
-    background: url(../img/directions-bg-768.png) 0 0 no-repeat;
   }
   .directions .block-cart {
     height: 332px;
@@ -570,15 +685,15 @@ button {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .info {
+  .block-info .info {
     width: 203px;
     height: 122px;
     padding-right: 0;
   }
-  .info p {
+  .block-info .info p {
     width: 170px;
   }
-  .info p:last-child {
+  .block-info .info p:last-child {
     width: 130px;
   }
   .rec {
@@ -619,11 +734,15 @@ button {
   .subscriptions {
     width: 100%;
     height: 397px;
-    background: url(../img/subscriptions-bg-768.png) 50% 0 no-repeat;
+    padding-top: 120px;
+  }
+  .background-subscriptions {
+    top: 25%;
   }
   .menu-subscriptions {
     width: 241px;
     margin: 0 auto;
+    margin-top: 25px;
   }
   .timetable {
     display: -webkit-box;
@@ -651,8 +770,67 @@ button {
     margin-top: 20px;
     display: block;
   }
+  .block-slider {
+    width: 628px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .name-info {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .name-info h3 {
+    display: block;
+  }
+  .name-info .info-text {
+    width: 290px;
+    text-align: center;
+  }
+  .cart-team {
+    position: relative;
+    width: 270px;
+    margin-top: 20px;
+  }
+  .cart-team img {
+    width: 92px;
+    height: 92px;
+  }
+  .cart-team .cart-name {
+    position: absolute;
+    width: 255px;
+    height: 87px;
+    top: 15px;
+    left: 35px;
+    padding-left: 84px;
+    z-index: -1;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .slider-teams {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
+  .slider-teams .slick-arrow {
+    width: 30px;
+    height: 20px;
+    top: 400px;
+  }
+  .slider-teams .slick-prev {
+    right: 0;
+  }
+  .slider-teams .slick-next {
+    left: 200px;
+  }
+  .liler-info {
+    width: 311px;
+  }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1456px) {
   .container {
     width: 1456px;
     padding: 0 140px;
@@ -753,15 +931,14 @@ button {
     font-size: 16px;
     line-height: 15px;
   }
-  .directions {
-    background: none;
-    background: url(../img/directions-bg-1456.png) 0 0 no-repeat;
-  }
   .directions .block-cart {
     width: 925px;
     height: 493px;
     margin: 0 auto;
     margin-top: 65px;
+  }
+  .background-directions {
+    top: -15%;
   }
   .directions-cart {
     width: 525px;
@@ -815,19 +992,27 @@ button {
   .subscriptions {
     width: 100%;
     height: 836px;
-    background: url(../img/subscriptions-bg-1456.png) 50% 0 no-repeat;
+    padding-top: 154px;
+  }
+  .background-subscriptions {
+    top: 0;
   }
   .menu-subscriptions {
     width: 286px;
+    margin-top: 54px;
   }
   .timetable {
     width: 931px;
     margin: 0 auto;
+    margin-top: 40px;
   }
   .timetable li {
     width: 263px;
     height: 237px;
+    margin-top: 0;
     padding-top: 58px;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
   .timetable li p:nth-child(3) {
     font-size: 30px;
