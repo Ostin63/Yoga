@@ -66,6 +66,7 @@ button {
   font-family: "Geometria", sans-serif;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  outline: none;
 }
 .btn:hover {
   background: #E65C7B;
@@ -711,6 +712,23 @@ button {
 .form-block-contacts {
   display: none;
 }
+.footer {
+  background: #8373A1;
+  color: #FFFFFF;
+}
+.footer-block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.block-contacts .social {
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 @media (min-width: 764px) {
   .container {
     width: 768px;
@@ -1166,6 +1184,46 @@ button {
     background: #E65C7B;
     font-family: "Geometria", sans-serif;
   }
+  .block-recording form input[type=submit]:hover {
+    background: #8E80A9;
+  }
+  .footer-block {
+    padding-top: 75px;
+    padding-left: 80px;
+  }
+  .block-contacts {
+    width: 400px;
+    height: 100 px;
+    font-size: 14px;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .block-contacts .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bottom-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 @media (min-width: 1456px) {
   .container {
@@ -1482,21 +1540,19 @@ button {
   .slider-reviews .slick-arrow {
     width: 45px;
     height: 30px;
-    top: 360px;
+    top: 140px;
   }
   .slider-reviews .slick-prev {
-    right: 390px;
+    right: -15px;
   }
   .slider-reviews .slick-next {
-    left: 380px;
+    left: -15px;
   }
   .counter-reviews {
-    top: -190px;
-    left: 570px;
+    display: none;
   }
   .counter-reviews-sub {
-    top: -190px;
-    left: 590px;
+    display: none;
   }
   .recording {
     position: relative;

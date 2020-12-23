@@ -1,0 +1,44 @@
+.footer {
+  background: #8373A1;
+  color: @color-white;
+}
+
+.footer-block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.block-contacts {
+  .social {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media @tablet-widths {
+  .footer-block {
+    padding-top: 75px;
+    padding-left: 80px;
+  }
+
+  .block-contacts {
+    width: 400px;
+    height: 100+px;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    .contacts {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .bottom-block {
+    display: flex;
+    justify-content: space-between;
+  }
+}
