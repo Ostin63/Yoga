@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
   background: @color-bg-lilac;
 }
 
@@ -204,10 +204,16 @@
 
 @media @desktop-widths {
   .reviews {
-    top: -350px;
+    top: -150px;
     padding-top: 150px;
-    padding-bottom: 180px;
+    padding-bottom: 0;
 
+  }
+
+  .block-reviews {
+    h2 {
+      top: -650px;
+    }
   }
 
   .review {
@@ -215,6 +221,7 @@
     margin-right: 20px;
     top: 0;
     left: 5px;
+
     p {
       font-size: 12px;
       line-height: 20px;
