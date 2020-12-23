@@ -1,13 +1,257 @@
 .reviews {
   position: relative;
   padding-top: 70px;
-  padding-bottom: 116px;
+  padding-bottom: 70px;
   background: @color-bg-lilac;
 }
 
 .block-reviews {
+  position: relative;
   text-align: center;
+
   h2 {
     margin: 0;
+  }
+}
+
+.review {
+  position: relative;
+  width: 250px;
+  height: 270px;
+  margin-top: 60px;
+  padding: 15px;
+  padding-top: 60px;
+  top: -20px;
+  text-align: left;
+  background: @color-white;
+  box-shadow: 0px 4px 25px @color-shadow;
+  box-sizing: border-box;
+
+  span {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    font-size: 80px;
+    line-height: 15px;
+    color: rgba(142, 128, 169, 0.39);
+    font-family: 'Francois One', sans-serif;
+  }
+
+  .block-img {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
+
+.review-info {
+  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+
+    &:first-child {
+      color: @color-red;
+    }
+  }
+
+  .social {
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.slider-reviews {
+  position: relative;
+
+  .slick-arrow {
+    position: absolute;
+    display: block;
+    width: 37px;
+    height: 16px;
+    top: 330px;
+    box-sizing: border-box;
+    border: 1px solid @color-lilac;
+    font-size: 0;
+    z-index: 2;
+  }
+
+  .slick-prev {
+    right: 65px;
+    background: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='%238E80A9'/%3E%3C/svg%3E") 50% 50% no-repeat;
+
+    &:hover {
+      background-color: @color-lilac;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='white'/%3E%3C/svg%3E");
+      box-shadow: 0px 0px 6px 0px @color-light-lilac
+    }
+
+    &:active {
+      box-shadow: 0px 0px 1px 0px @color-light-lilac;
+    }
+  }
+
+  .slick-next {
+    left: 65px;
+    background: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8L1 4.5L5 1' stroke='%238E80A9'/%3E%3C/svg%3E") 50% 50% no-repeat;
+
+    &:hover {
+      background-color: @color-lilac;
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8L1 4.5L5 1' stroke='white'/%3E%3C/svg%3E");
+    }
+
+    &:active {
+      box-shadow: 0px 0px 1px 0px @color-light-lilac;
+    }
+  }
+}
+
+.counter-reviews {
+  position: absolute;
+  display: block;
+  top: 347px;
+  left: 115px;
+}
+
+.counter-reviews-sub {
+  position: absolute;
+  display: block;
+  top: 347px;
+  left: 130px;
+}
+
+@media @tablet-widths {
+  .reviews {
+    height: 0;
+    padding-top: 150px;
+    padding-bottom: 180px;
+  }
+
+  .block-reviews {
+    h2 {
+      position: relative;
+      top: -620px;
+    }
+  }
+
+  .review {
+    width: 442px;
+    height: 315px;
+    top: -10px;
+    margin: 0 auto;
+    margin-top: 18px;
+    padding-left: 87px;
+    padding-right: 57px;
+    padding-top: 72px;
+
+    span {
+      top: 65px;
+      left: 87px;
+    }
+
+    .block-img {
+      margin-top: 25px;
+    }
+
+    p {
+      &:nth-child(3) {
+        margin-right: 90px;
+      }
+    }
+  }
+
+  .review-info {
+    margin-right: 140px;
+  }
+
+  .slider-reviews {
+    top: -600px;
+
+    .slick-arrow {
+      width: 30px;
+      height: 20px;
+      top: 690px;
+    }
+
+    .slick-prev {
+      right: 260px;
+    }
+
+    .slick-next {
+      left: 260px;
+    }
+  }
+
+  .counter-reviews {
+    top: 113px;
+    left: 300px;
+  }
+
+  .counter-reviews-sub {
+    top: 113px;
+    left: 320px;
+  }
+}
+
+@media @desktop-widths {
+  .reviews {
+    top: -350px;
+    padding-top: 150px;
+    padding-bottom: 180px;
+
+  }
+
+  .review {
+    margin: 0 auto;
+    margin-right: 20px;
+    top: 0;
+    left: 5px;
+    p {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+
+  .review-info {
+    margin-right: 140px;
+  }
+
+  .slider-reviews {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 28px;
+
+    .slick-arrow {
+      width: 45px;
+      height: 30px;
+      top: 360px;
+    }
+
+    .slick-prev {
+      right: 390px;
+    }
+
+    .slick-next {
+      left: 380px;
+    }
+  }
+
+  .counter-reviews {
+    top: -190px;
+    left: 570px;
+  }
+
+  .counter-reviews-sub {
+    top: -190px;
+    left: 590px;
   }
 }

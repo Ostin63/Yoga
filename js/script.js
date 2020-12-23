@@ -40,23 +40,26 @@ $(document).ready(function () {
 		slidesToShow: 2,
 		arrows: true,
 		centerMode: false,
+		vertical: false,
 		responsive: [
 			{
 				breakpoint: 1456,
 				settings: {
 					slidesToShow: 2,
+					vertical: true
 				}
 			},
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 1
+					slidesToShow: 1,
+					vertical: false
 				}
 			}
 		]
 	});
 	$(".slider-reviews").on('afterChange', function (event, slick, currentSlide) {
-		$(".counter").html(currentSlide + 1 + " &sol; ");
-		$(".counter-sub").html(slick.slideCount);
+		$(".counter-reviews").html(currentSlide + 1 + " &sol; ");
+		$(".counter-reviews-sub").html(slick.slideCount);
 	});
 });

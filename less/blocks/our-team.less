@@ -49,7 +49,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     background: @color-white;
-    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    box-shadow: 0px 4px 25px @color-shadow;
     box-sizing: border-box;
 
     p {
@@ -123,6 +123,9 @@
 }
 
 @media @tablet-widths {
+  .our-team {
+    height: 1000px;
+  }
   .block-slider {
     position: relative;
     width: 628px;
@@ -142,6 +145,11 @@
       top: 386px;
       left: 235px;
     }
+  }
+
+  .bg-teams {
+    position: absolute;
+    display: block;
   }
 
   .name-info {
@@ -243,7 +251,7 @@
 
 @media @desktop-widths {
   .our-team {
-    top: -350px;
+    height: 1650px;
   }
 
   .block-slider {
@@ -270,11 +278,6 @@
       width: 290px;
       text-align: left;
     }
-  }
-
-  .bg-teams {
-    position: absolute;
-    display: block;
   }
 
   .cart-team {
