@@ -417,12 +417,20 @@ button {
   margin-bottom: 10px;
 }
 .our-team {
+  position: relative;
   padding-top: 55px;
   padding-bottom: 5px;
   background: #FCF8FE;
 }
 .our-team .red {
   color: #E65C7B;
+}
+.block-slider .counter,
+.block-slider .counter-sub {
+  display: none;
+}
+.bg-teams {
+  display: none;
 }
 .teams {
   text-align: center;
@@ -432,8 +440,6 @@ button {
   height: 82px;
   margin-left: 10px;
   margin-top: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   display: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,6 +450,7 @@ button {
 .cart-team .img {
   width: 82px;
   height: 82px;
+  margin: auto;
 }
 .cart-team .cart-name {
   width: 146px;
@@ -474,6 +481,9 @@ button {
 .cart-team .cart-name .social p {
   width: 20px;
 }
+.cart-team .cart-name .look {
+  display: none;
+}
 .name-info h3 {
   display: none;
 }
@@ -485,7 +495,7 @@ button {
   display: block;
   width: 16px;
   height: 31px;
-  top: 75px;
+  top: 65px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #8E80A9;
@@ -517,6 +527,18 @@ button {
 .slider-teams .slick-next:active {
   -webkit-box-shadow: 0px 0px 1px 0px #8B7EAC;
           box-shadow: 0px 0px 1px 0px #8B7EAC;
+}
+.reviews {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 116px;
+  background: #FCF8FE;
+}
+.block-reviews {
+  text-align: center;
+}
+.block-reviews h2 {
+  margin: 0;
 }
 @media (min-width: 764px) {
   .container {
@@ -771,6 +793,7 @@ button {
     display: block;
   }
   .block-slider {
+    position: relative;
     width: 628px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -779,21 +802,36 @@ button {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .block-slider .counter {
+    position: absolute;
+    display: block;
+    top: 386px;
+    left: 213px;
+  }
+  .block-slider .counter-sub {
+    position: absolute;
+    display: block;
+    top: 386px;
+    left: 235px;
+  }
   .name-info {
     margin: 0 auto;
     margin-top: 20px;
+    text-align: left;
   }
   .name-info h3 {
     display: block;
   }
   .name-info .info-text {
     width: 290px;
-    text-align: center;
+    text-align: left;
   }
   .cart-team {
     position: relative;
     width: 270px;
-    margin-top: 20px;
+    top: -10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .cart-team img {
     width: 92px;
@@ -802,13 +840,44 @@ button {
   .cart-team .cart-name {
     position: absolute;
     width: 255px;
-    height: 87px;
-    top: 15px;
-    left: 35px;
-    padding-left: 84px;
+    height: 67px;
+    top: 35px;
+    left: 10px;
+    padding-top: 10px;
+    padding-left: 90px;
+    font-size: 10px;
+    line-height: 15px;
     z-index: -1;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+  .cart-team .cart-name p {
+    margin: 0;
+  }
+  .cart-team .cart-name .social {
+    width: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .cart-team .cart-name .social p {
+    width: 30px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  .cart-team .cart-name .social p svg {
+    width: 10px;
+    height: 7px;
+  }
+  .cart-team .cart-name .look {
+    width: 45px;
+    display: block;
+    margin-top: 10px;
+    border-bottom: 1px solid #8E80A9;
+    cursor: pointer;
   }
   .slider-teams {
     position: relative;
@@ -818,15 +887,15 @@ button {
   .slider-teams .slick-arrow {
     width: 30px;
     height: 20px;
-    top: 400px;
+    top: 380px;
   }
   .slider-teams .slick-prev {
-    right: 0;
+    right: 35px;
   }
   .slider-teams .slick-next {
-    left: 200px;
+    left: 170px;
   }
-  .liler-info {
+  .sliler-info {
     width: 311px;
   }
 }
@@ -1031,5 +1100,93 @@ button {
     margin: 0 auto;
     margin-top: 60px;
     display: block;
+  }
+  .our-team {
+    top: -350px;
+  }
+  .block-slider {
+    width: 976px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+  .block-slider .counter {
+    top: 586px;
+    left: 333px;
+  }
+  .block-slider .counter-sub {
+    top: 586px;
+    left: 355px;
+  }
+  .name-info {
+    margin-top: 60px;
+  }
+  .name-info .info-text {
+    width: 290px;
+    text-align: left;
+  }
+  .bg-teams {
+    position: absolute;
+    display: block;
+  }
+  .cart-team {
+    width: 270px;
+    top: -40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .cart-team img {
+    width: 143px;
+    height: 144px;
+  }
+  .cart-team .cart-name {
+    width: 399px;
+    height: 105px;
+    top: 56px;
+    left: 23px;
+    padding-top: 19px;
+    padding-left: 141px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .cart-team .cart-name p {
+    width: 88px;
+  }
+  .cart-team .cart-name .social {
+    width: 45px;
+    margin-left: 75px;
+  }
+  .cart-team .cart-name .social p svg {
+    width: 15px;
+    height: 10px;
+  }
+  .cart-team .cart-name .look {
+    width: 57px;
+    margin-left: 70px;
+  }
+  .slider-teams {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 80px;
+  }
+  .slider-teams .slick-arrow {
+    width: 45px;
+    height: 30px;
+    top: 580px;
+  }
+  .slider-teams .slick-prev {
+    right: 60px;
+  }
+  .slider-teams .slick-next {
+    left: 270px;
+  }
+  .sliler-info {
+    width: 487px;
+  }
+  .name-info {
+    width: 487px;
+  }
+  .name-info .info-text {
+    width: 100%;
   }
 }

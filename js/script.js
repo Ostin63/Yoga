@@ -5,41 +5,58 @@ $(document).ready(function () {
 		arrows: false,
 		fade: true,
 		asNavFor: '.slider-teams',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					vertical: false,
-				}
-			},
-			{
-				breakpoint: 1456,
-				settings: {
-					vertical: true,
-				}
-			}
-		]
 	});
 	$('.slider-teams').slick({
-		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.sliler-info',
+		slidesToShow: 3,
+		vertical: true,
 		arrows: true,
+		centerMode: false,
+		asNavFor: '.sliler-info',
 		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					vertical: false,
-				}
-			},
 			{
 				breakpoint: 1456,
 				settings: {
 					slidesToShow: 3,
 					vertical: true,
 				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					vertical: false,
+				}
 			}
 		]
+	});
+	$(".slider-teams").on('afterChange', function (event, slick, currentSlide) {
+		$(".counter").html(currentSlide + 1 + " &sol; ");
+		$(".counter-sub").html(slick.slideCount);
+	});
+
+	$('.slider-reviews').slick({
+		slidesToScroll: 1,
+		slidesToShow: 2,
+		arrows: true,
+		centerMode: false,
+		responsive: [
+			{
+				breakpoint: 1456,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+	$(".slider-reviews").on('afterChange', function (event, slick, currentSlide) {
+		$(".counter").html(currentSlide + 1 + " &sol; ");
+		$(".counter-sub").html(slick.slideCount);
 	});
 });
