@@ -718,7 +718,7 @@ button {
 }
 .footer-block {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .block-contacts .social {
   width: 120px;
@@ -1190,15 +1190,20 @@ button {
   .footer-block {
     padding-top: 75px;
     padding-left: 80px;
+    padding-bottom: 10px;
   }
   .block-contacts {
     width: 400px;
-    height: 100 px;
+    height: 150px;
     font-size: 14px;
     line-height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1208,6 +1213,7 @@ button {
             box-sizing: border-box;
   }
   .block-contacts .contacts {
+    height: 120px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1215,6 +1221,17 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .block-contacts .contacts p {
+    margin: 0;
+    margin-top: 10px;
+    width: 150px;
+  }
+  .block-contacts .social svg {
+    width: 15px;
+    height: 10px;
   }
   .bottom-block {
     display: -webkit-box;
@@ -1512,8 +1529,8 @@ button {
     width: 100%;
   }
   .reviews {
-    top: -150px;
-    padding-top: 150px;
+    top: 0;
+    padding-top: 0;
     padding-bottom: 0;
   }
   .block-reviews h2 {
@@ -1556,7 +1573,7 @@ button {
   }
   .recording {
     position: relative;
-    top: -200px;
+    top: 0;
     background-image: none;
     background-image: url(../img/recording-bg-1456.png);
   }
@@ -1635,5 +1652,13 @@ button {
     color: #FFFFFF;
     background: #E65C7B;
     font-family: "Geometria", sans-serif;
+  }
+  .footer-block {
+    padding-top: 16px;
+    padding-left: 80px;
+    padding-bottom: 16px;
+  }
+  .block-contacts {
+    display: none;
   }
 }

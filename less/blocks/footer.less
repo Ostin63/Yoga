@@ -5,7 +5,7 @@
 
 .footer-block {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .block-contacts {
@@ -20,25 +20,55 @@
   .footer-block {
     padding-top: 75px;
     padding-left: 80px;
+    padding-bottom: 10px;
   }
 
   .block-contacts {
     width: 400px;
-    height: 100+px;
+    height: 150px;
     font-size: 14px;
     line-height: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     box-sizing: border-box;
+
     .contacts {
+      height: 120px;
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+        margin-top: 10px;
+        width: 150px;
+      }
+    }
+
+    .social {
+      svg {
+        width: 15px;
+        height: 10px;
+      }
     }
   }
 
   .bottom-block {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media @desktop-widths {
+  .footer-block {
+    padding-top: 16px;
+    padding-left: 80px;
+    padding-bottom: 16px;
+  }
+
+  .block-contacts {
+    display: none;
   }
 }
