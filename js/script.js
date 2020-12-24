@@ -83,4 +83,15 @@ $(document).ready(function () {
 		});
 	});
 	waypoints[0].options.offset = -1;
+
+	// Модальное окно
+
+	$('.left-block').on('click', function () { 
+		$('.nav-modal').addClass('show-block');
+		$('.modal-overlay').addClass('show-block')
+	});
+	$('.nav-modal__close').on('click', function () {
+		$('.nav-modal').removeClass('show-block');
+		$('.modal-overlay').removeClass('show-block');
+	});
 });
