@@ -90,7 +90,7 @@
     </div>
   </header>
   <main>
-    <section class="directions">
+    <section class="directions" id="1">
       <div class="container">
         <div class="directions-block">
           <h2>Направления</h2>
@@ -162,7 +162,7 @@
         </div>
       </div>
     </section>
-    <section class="subscriptions">
+    <section class="subscriptions" id="2">
       <img class="background-subscriptions" src="img/subscriptions-bg-1456.png" alt="background">
       <div class="container">
         <div class="subscriptions-block">
@@ -758,7 +758,7 @@
         </div>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews"  id="5">
       <div class="container">
         <div class="block-reviews">
           <h2>Отзывы</h2>
@@ -915,7 +915,7 @@
               <div class="review">
                 <span>“</span>
                 <p>
-                  Йога помогла мне развить мое тело, благодаря чему можно меньше уставать и больше внимания уделять своему здоровью.
+                  Йога помогла мне развить мое тело, благодаря чему можно  больше внимания уделять своему здоровью.
                 </p>
                 <p>
                   Уже год, как я активно посещаю йогу и очень довольна этим.
@@ -988,7 +988,7 @@
               <div class="review">
                 <span>“</span>
                 <p>
-                  Йога помогла мне развить мое тело, благодаря чему можно меньше уставать и больше внимания уделять своему здоровью.
+                  Йога помогла мне развить мое тело, благодаря чему можно больше внимания уделять своему здоровью.
                 </p>
                 <p>
                   Уже год, как я активно посещаю йогу и очень довольна этим.
@@ -1023,7 +1023,7 @@
               <div class="review">
                 <span>“</span>
                 <p>
-                  Йога помогла мне развить мое тело, благодаря чему можно меньше уставать и больше внимания уделять своему здоровью.
+                  Йога помогла мне развить мое тело, благодаря чему можно  больше внимания уделять своему здоровью.
                 </p>
                 <p>
                   Йога это отличный способ быстро
@@ -1097,7 +1097,7 @@
         </div>
       </div>
     </section>
-    <section class="recording" id="7 ">
+    <section class="recording" id="6">
       <div class="container">
         <div class="block-recording">
           <div class="form-block-contacts">
@@ -1184,34 +1184,19 @@
       </div>
     </div>
   </footer>
-  <div class="intro-modal container  d-none">
-    <div class="intro-modal__block">
-      <h2 class="intro-modal__title">Хочешь записаться на занятие?</h2>
-      <p class="intro-modal__text">Оставьте контакты и наши менеджеры
-        свяжуться в ближайшее время</p>
-      <form class="modal-form" action="/" method="post" enctype="multipart/form-data">
-        <div class="modal-form__phone form-cart">
-          <label class="visually-hidden" for="phone">Телефон</label>
-          <input type="text" id="phone" placeholder="Телефон" name="fphone" required>
-        </div>
-        <div class="modal-form__name form-cart">
-          <label class="visually-hidden" for="name">Имя</label>
-          <input type="text" id="name" placeholder="Имя" name="fname" required>
-        </div>
-        <div class="modal-form__mail form-cart">
-          <label class="visually-hidden" for="email">E-mail</label>
-          <input type="text" id="email" placeholder="E-mail" name="fmail" required>
-        </div>
-        <div class="modal-form__checkbox">
-          <input class="" type="checkbox" id="checkbox" name="fcheckbox" checked required>
-          <label for="checkbox">Я согласен на обработку
-            персональных данных</label>
-        </div>
-        <input class="modal-form__button" type="submit" value="Записатьтся">
-      </form>
+  <div class="nav-modal container d-none">
+    <div class="nav-modal__block">
+      <ul>
+        <li><a href="#1">Направления</a></li>
+        <li><a href="#2">Абонементы</a></li>
+        <li><a href="#block-4">Наша команда</a></li>
+        <li><a href="#5">Отзывы</a></li>
+        <li><a href="#6">Запись на бесплатное пробное занятие</a></li>
+      </ul>
       <button class="modal-form__close"></button>
     </div>
   </div>
+  <div class="modal-overlay d-none"></div>
   <script src="js/jQuery3.3.1.min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/slick.js"></script>
