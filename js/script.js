@@ -62,4 +62,25 @@ $(document).ready(function () {
 		$(".counter-reviews").html(currentSlide + 1 + " &sol; ");
 		$(".counter-reviews-sub").html(slick.slideCount);
 	});
+
+	// waypoints
+
+	let counter = $('.block-counter');
+	let waypoints = $('.tracked').waypoint(function (dir) {
+		let hash = this.element.id;
+		if (dir === 'up') {
+			let id = parseInt(hash.split('-')[1]);
+			if (id > 1) id--;
+			hash = [hash.split('-')[0], id].join('-');
+		}
+
+		counter.removeClass('show');
+
+		$.each(counter, function () {
+			if ($(this).attr('href').slice(1) == hash) {
+				$(this).addClass('show')
+			}
+		});
+	});
+	waypoints[0].options.offset = -1;
 });

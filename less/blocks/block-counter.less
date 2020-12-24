@@ -1,0 +1,46 @@
+.block-counter {
+  display: none;
+}
+
+@media @tablet-widths {
+  .block-counter {
+    position: fixed;
+    width: 18px;
+    top: 190px;
+    right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    font-family: Geometria;
+    font-size: 18px;
+    line-height: 15px;
+    color: rgb(174, 164, 200);
+    z-index: 20;
+  }
+
+  .show {
+    margin-left: -3px;
+    font-size: 16px;
+    display: block;
+
+    &::after {
+      content: "";
+      position: relative;
+      bottom: 10px;
+      left: 40px;
+      display: block;
+      width: 17px;
+      height: 1px;
+      background: rgb(139, 126, 172);
+    }
+  }
+}
+
+@media @desktop-widths {
+  .block-counter {
+    top: 400px;
+    font-size: 30px;
+    line-height: 15px;
+  }
+}

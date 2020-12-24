@@ -14,7 +14,13 @@
 </head>
 
 <body>
-  <header class="main-header">
+    <a class="block-counter" href="#block-1" hidden>01</a>
+    <a class="block-counter" href="#block-2" hidden>02</a>
+    <a class="block-counter" href="#block-3" hidden>03</a>
+    <a class="block-counter" href="#block-4" hidden>04</a>
+    <a class="block-counter" href="#block-5" hidden>05</a>
+ 
+  <header class="main-header  tracked" id="block-1">
     <div class="cloud">
       <img class="cloud1" src="img/cloud-01.png" alt="cloud">
       <img class="cloud2" src="img/cloud-02.png" alt="cloud">
@@ -77,22 +83,14 @@
             </a>
           </div>
           <div>
-            <p>Санкт-Петербург</p>
+            <p class=" tracked" id="block-2">Санкт-Петербург</p>
           </div>
         </div>
       </div>
-      <p class="counter-1">01</p>
     </div>
   </header>
   <main>
     <section class="directions">
-      <div class="background-directions">
-        <picture>
-          <source media="(min-width: 1456px)" srcset="img/directions-bg-1456.png">
-          <source media="(min-width: 768px)" srcset="img/directions-bg-768.png">
-          <img src="img/directions-bg-320.png" srcset="img/directions-bg-320.png" alt="background">
-        </picture>
-      </div>
       <div class="container">
         <div class="directions-block">
           <h2>Направления</h2>
@@ -157,13 +155,12 @@
                 </a>
               </div>
             </div>
-            <div class="li-button">
+            <div class="li-button tracked" id="block-3">
               <button class="block-cart-button">Смотреть больше</button>
             </div>
           </div>
         </div>
       </div>
-      <!--<p class="counter">02</p>-->
     </section>
     <section class="subscriptions">
       <img class="background-subscriptions" src="img/subscriptions-bg-1456.png" alt="background">
@@ -197,10 +194,8 @@
           </ul>
         </div>
       </div>
-      <!--<p class="counter">03</p>-->
     </section>
-    <section class="our-team">
-      <img class="bg-teams" src="img/teams-bg-1456.png" alt="bg">
+    <section class="our-team tracked" id="block-4">
       <div class="container">
         <div class="teams">
           <h2>Наша команда</h2>
@@ -767,12 +762,11 @@
                 </div>
               </div>
             </div>
-            <div class="counter">1 &sol;</div>
+            <div class="counter tracked" id="block-5">1 &sol;</div>
             <div class="counter-sub">9</div>
           </div>
         </div>
       </div>
-      <!--<p class="counter">04</p>-->
     </section>
     <section class="reviews">
       <div class="container">
@@ -1126,7 +1120,6 @@
           <div class="counter-reviews-sub">9</div>
         </div>
       </div>
-      <!--<p class="counter">05</p>-->
     </section>
     <section class="recording">
       <div class="container">
@@ -1216,6 +1209,7 @@
     </div>
   </footer>
   <script src="js/jQuery3.3.1.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/script.js"></script>
 </body>

@@ -97,6 +97,9 @@ button {
             transform: translateX(-100%);
   }
 }
+.block-counter {
+  display: none;
+}
 .cloud {
   overflow: hidden;
   position: relative;
@@ -263,19 +266,15 @@ button {
 .bottom-menu {
   display: none;
 }
-.counter-1 {
-  display: none;
-}
 .directions {
   position: relative;
   margin-top: -36px;
   padding-bottom: 20px;
   background: #FCF8FE;
-}
-.background-directions {
-  position: absolute;
-  width: 100%;
-  top: 0;
+  background-image: url(../img/directions-bg-320.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 }
 .directions-block {
   position: relative;
@@ -698,6 +697,21 @@ button {
   background: rgba(255, 255, 255, 0);
   font-family: "Geometria", sans-serif;
 }
+.block-recording form input[type=text]::-webkit-input-placeholder {
+  color: rgba(142, 128, 169, 0.4);
+}
+.block-recording form input[type=text]::-moz-placeholder {
+  color: rgba(142, 128, 169, 0.4);
+}
+.block-recording form input[type=text]:-ms-input-placeholder {
+  color: rgba(142, 128, 169, 0.4);
+}
+.block-recording form input[type=text]::-ms-input-placeholder {
+  color: rgba(142, 128, 169, 0.4);
+}
+.block-recording form input[type=text]::placeholder {
+  color: rgba(142, 128, 169, 0.4);
+}
 .block-recording form input[type=submit] {
   width: 250px;
   height: 56px;
@@ -749,6 +763,36 @@ button {
   h3 {
     font-size: 16px;
     line-height: 20px;
+  }
+  .block-counter {
+    position: fixed;
+    width: 18px;
+    top: 190px;
+    right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    font-family: Geometria;
+    font-size: 18px;
+    line-height: 15px;
+    color: #aea4c8;
+    z-index: 20;
+  }
+  .show {
+    margin-left: -3px;
+    font-size: 16px;
+    display: block;
+  }
+  .show::after {
+    content: "";
+    position: relative;
+    bottom: 10px;
+    left: 40px;
+    display: block;
+    width: 17px;
+    height: 1px;
+    background: #8b7eac;
   }
   .cloud {
     height: 484px;
@@ -815,37 +859,13 @@ button {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .counter-1 {
-    width: 50px;
-    position: absolute;
-    display: block;
-    top: 180px;
-    right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    font-size: 18px;
-    line-height: 15px;
-    color: rgba(174, 164, 200, 0.5);
-  }
-  .counter-1::before {
-    position: absolute;
-    content: "";
-    width: 17px;
-    top: 50%;
-    right: 0;
-    display: block;
-    border-bottom: 1px solid rgba(139, 126, 172, 0.73);
-  }
   .directions {
     margin-top: -36px;
+    background-image: none;
+    background-image: url(../img/directions-bg-768.png);
+    background-position: 0 50%;
+    background-size: 50%;
+    background-repeat: no-repeat;
   }
   .directions .block-cart {
     height: 332px;
@@ -982,7 +1002,11 @@ button {
     display: block;
   }
   .our-team {
-    height: 1000px;
+    background: none;
+    background: #FCF8FE;
+    background-image: url(../img/teams-bg-768.png);
+    background-repeat: no-repeat;
+    background-position: 0 -70%;
   }
   .block-slider {
     position: relative;
@@ -1095,13 +1119,11 @@ button {
     width: 311px;
   }
   .reviews {
-    height: 0;
     padding-top: 150px;
     padding-bottom: 180px;
-  }
-  .block-reviews h2 {
-    position: relative;
-    top: -620px;
+    background-image: url(../img/teams-bg-768.png);
+    background-repeat: no-repeat;
+    background-position: 0 -107%;
   }
   .review {
     width: 442px;
@@ -1127,7 +1149,7 @@ button {
     margin-right: 140px;
   }
   .slider-reviews {
-    top: -600px;
+    margin-top: 40px;
   }
   .slider-reviews .slick-arrow {
     width: 30px;
@@ -1141,11 +1163,11 @@ button {
     left: 260px;
   }
   .counter-reviews {
-    top: 113px;
+    top: 753px;
     left: 300px;
   }
   .counter-reviews-sub {
-    top: 113px;
+    top: 753px;
     left: 320px;
   }
   .recording {
@@ -1262,6 +1284,11 @@ button {
     font-size: 16px;
     line-height: 15px;
   }
+  .block-counter {
+    top: 400px;
+    font-size: 30px;
+    line-height: 15px;
+  }
   .cloud {
     height: 908px;
   }
@@ -1343,14 +1370,18 @@ button {
     font-size: 16px;
     line-height: 15px;
   }
+  .directions {
+    background: none;
+    background-image: url(../img/directions-bg-1456.png);
+    background-position: 20% 0;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
   .directions .block-cart {
     width: 925px;
     height: 493px;
     margin: 0 auto;
     margin-top: 65px;
-  }
-  .background-directions {
-    top: -15%;
   }
   .directions-cart {
     width: 525px;
@@ -1445,7 +1476,11 @@ button {
     display: block;
   }
   .our-team {
-    height: 1550px;
+    background: none;
+    background: #FCF8FE;
+    background-image: url(../img/teams-bg-1456.png);
+    background-repeat: no-repeat;
+    background-position: 0 -20%;
   }
   .block-slider {
     width: 976px;
@@ -1529,12 +1564,13 @@ button {
     width: 100%;
   }
   .reviews {
-    top: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .block-reviews h2 {
-    top: -650px;
+    padding-top: 140px;
+    padding-bottom: 150px;
+    background: none;
+    background: #FCF8FE;
+    background-image: url(../img/teams-bg-1456.png);
+    background-position: 0 108%;
+    background-repeat: no-repeat;
   }
   .review {
     margin: 0 auto;
@@ -1552,7 +1588,7 @@ button {
   .slider-reviews {
     width: 940px;
     margin: 0 auto;
-    margin-top: 28px;
+    margin-top: 60px;
   }
   .slider-reviews .slick-arrow {
     width: 45px;
