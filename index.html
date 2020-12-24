@@ -50,7 +50,7 @@
             <p>a</p>
           </div>
           <button class="header-button">
-            <a href="https://vk.com/yoga_vk">
+            <a href="#7">
               <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L5 5L1 9" stroke="white" />
               </svg>
@@ -1121,7 +1121,7 @@
         </div>
       </div>
     </section>
-    <section class="recording">
+    <section class="recording" id="7">
       <div class="container">
         <div class="block-recording">
           <div class="form-block-contacts">
@@ -1208,6 +1208,34 @@
       </div>
     </div>
   </footer>
+  <div class="intro-modal container  d-none">
+    <div class="intro-modal__block">
+      <h2 class="intro-modal__title">Хочешь записаться на занятие?</h2>
+      <p class="intro-modal__text">Оставьте контакты и наши менеджеры
+        свяжуться в ближайшее время</p>
+      <form class="modal-form" action="/" method="post" enctype="multipart/form-data">
+        <div class="modal-form__phone form-cart">
+          <label class="visually-hidden" for="phone">Телефон</label>
+          <input type="text" id="phone" placeholder="Телефон" name="fphone" required>
+        </div>
+        <div class="modal-form__name form-cart">
+          <label class="visually-hidden" for="name">Имя</label>
+          <input type="text" id="name" placeholder="Имя" name="fname" required>
+        </div>
+        <div class="modal-form__mail form-cart">
+          <label class="visually-hidden" for="email">E-mail</label>
+          <input type="text" id="email" placeholder="E-mail" name="fmail" required>
+        </div>
+        <div class="modal-form__checkbox">
+          <input class="" type="checkbox" id="checkbox" name="fcheckbox" checked required>
+          <label for="checkbox">Я согласен на обработку
+            персональных данных</label>
+        </div>
+        <input class="modal-form__button" type="submit" value="Записатьтся">
+      </form>
+      <button class="modal-form__close"></button>
+    </div>
+  </div>
   <script src="js/jQuery3.3.1.min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/slick.js"></script>
