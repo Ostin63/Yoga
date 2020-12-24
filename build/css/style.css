@@ -480,6 +480,7 @@ button {
 }
 .cart-team .cart-name .social p {
   width: 20px;
+  cursor: pointer;
 }
 .cart-team .cart-name .look {
   display: none;
@@ -1067,9 +1068,9 @@ button {
     padding-left: 90px;
     font-size: 10px;
     line-height: 15px;
-    z-index: -1;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    z-index: -1;
   }
   .cart-team .cart-name p {
     margin: 0;
