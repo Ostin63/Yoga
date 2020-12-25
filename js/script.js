@@ -231,3 +231,39 @@ let addThumbnailClickBtn = function (itemButton, newsCart) {
 for (let i = 0; i < subscriptionsDate.length; i++) {
 	addThumbnailClickBtn(subscriptionsDate[i], catCarts[i]);
 }
+
+	// Описание направлений
+	
+let recButton = document.querySelectorAll('.rec');
+let blockDescription = document.querySelectorAll('.block-description');
+let modalOverlay = document.querySelector('.modal-overlay');
+
+let infoCarts = [];
+for (let i = 0; i < blockDescription.length; i++) {
+	let newsCart = blockDescription[i];
+	infoCarts.push(newsCart)
+}
+
+let addThumbnailClick = function (itemButton, newsCart) {
+	itemButton.addEventListener('click', function (e) {
+		
+		newsCart.classList.add('show-block');
+		modalOverlay.classList.add('show-block');
+	});
+};
+
+for (let i = 0; i < recButton.length; i++) {
+	addThumbnailClick(recButton[i], infoCarts[i]);
+};
+
+let btnClose = document.querySelectorAll('.btn-close');
+
+let closeBlock = function (itemButton, newsCart) {
+	itemButton.addEventListener('click', function (e) {
+		newsCart.classList.remove('show-block');
+		modalOverlay.classList.remove('show-block');
+	});
+};
+for (let i = 0; i < btnClose.length; i++) {
+	closeBlock(btnClose[i], infoCarts[i]);
+};

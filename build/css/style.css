@@ -888,6 +888,35 @@ button {
             transform: translateY(0);
   }
 }
+.block-description {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 290px/2);
+  text-align: center;
+  width: 290px;
+  padding: 40px 20px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 1px 0px 47px -3px #8E80A9;
+          box-shadow: 1px 0px 47px -3px #8E80A9;
+  z-index: 100;
+  display: none;
+}
+.top-block img {
+  width: 250px;
+  height: 210px;
+}
+.text-yoga p {
+  font-size: 14px;
+  line-height: 15px;
+}
+.btn-close {
+  margin-top: 30px;
+  margin: 0 auto;
+  padding: 18px 50px;
+  font-size: 14px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
 .intro-modal {
   position: fixed;
   top: 50px;
@@ -1364,11 +1393,11 @@ button {
   }
   .block-cart-all .directions-cart img {
     width: 250px;
-    height: 250px;
+    height: 210px;
   }
   .block-cart-all .directions-cart .block-info-all {
     width: 300px;
-    height: 250px;
+    height: 210px;
     padding-left: 40px;
   }
   .block-cart-all .directions-cart .block-info-all .info h3 {
@@ -1379,8 +1408,8 @@ button {
     padding-bottom: 10px;
   }
   .block-cart-all .directions-cart .rec {
-    height: 250px;
-    padding-top: 120px;
+    height: 210px;
+    padding-top: 100px;
   }
   .block-cart-all .all-button {
     margin-top: 30px;
@@ -1700,6 +1729,23 @@ button {
     font-size: 30px;
     line-height: 40px;
   }
+  .block-description {
+    width: 680px;
+    top: 80px;
+    left: calc(50% - 680px/2);
+    padding: 40px 20px;
+  }
+  .text-yoga {
+    padding: 20px;
+  }
+  .top-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .btn-close {
+    margin-top: 40px;
+  }
   .intro-modal {
     left: calc(50% - 764px/2);
     -webkit-box-sizing: border-box;
@@ -1916,9 +1962,6 @@ button {
     height: 48px;
     font-size: 12px;
     line-height: 20px;
-  }
-  .block-cart-all {
-    display: block;
   }
   .block-cart-all .directions-cart {
     width: 550px;
@@ -2201,6 +2244,19 @@ button {
   .nav-modal__block {
     width: 1176px;
     padding: 100px 150px;
+  }
+  .block-description {
+    width: 900px;
+    padding: 100px 60px;
+    left: calc(50% - 900px/2);
+  }
+  .text-yoga h3 {
+    font-size: 30px;
+    line-height: 15px;
+  }
+  .text-yoga p {
+    font-size: 18px;
+    line-height: 30px;
   }
   .intro-modal {
     left: calc(50% - 1366px/2);
