@@ -98,7 +98,16 @@ $(document).ready(function () {
 		$('.nav-modal').removeClass('show-block');
 		$('.modal-overlay').removeClass('show-block');
 	});
-
+	// Направления
+	
+	$('.button-top').on('click', function () {
+		$('.block-cart-all').addClass('show-block');
+		$('.button-top').addClass('button-active');
+	});
+	$('.block-button').on('click', function () {
+		$('.block-cart-all').removeClass('show-block');
+		$('.button-top').removeClass('button-active');
+	})
 
 	// Форма отправки заявки
 
@@ -148,7 +157,34 @@ $(document).ready(function () {
 			}
 		}
 	});
+
 	$('#phone').mask("+7(999)999-9999", {
+		autoclear: false
+	});
+
+	$('.free-lesson').validate({
+		rules: {
+			fbname: {
+				required: true,
+				minlength: 2
+			},
+			fbphone: {
+				required: true,
+				checkMask: true
+			}
+		},
+		messages: {
+			fbname: {
+				required: "Это поле обязательно",
+				minlength: "Введите не менее 2-х символов в поле 'Имя'"
+			},
+			fbphone: {
+				required: "Это поле обязательно",
+				checkMask: "Введите полный номер телефона"
+			}
+		}
+	});
+	$('#phone-bottom').mask("+7(999)999-9999", {
 		autoclear: false
 	});
 	

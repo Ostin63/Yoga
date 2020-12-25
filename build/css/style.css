@@ -51,6 +51,7 @@ a {
   text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
 }
 button {
   background: rgba(255, 255, 255, 0);
@@ -338,6 +339,9 @@ button {
   padding-top: 52px;
 }
 .block-cart-button {
+  display: none;
+}
+.block-cart-all {
   display: none;
 }
 .subscriptions {
@@ -682,11 +686,11 @@ button {
           box-sizing: border-box;
 }
 .block-recording h2 {
-  margin-top: 0;
+  margin: 0;
   font-size: 20px;
   line-height: 27px;
 }
-.block-recording form {
+.free-lesson {
   height: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -699,33 +703,50 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.block-recording form input[type=text] {
-  height: 56px;
+.form-cart-bottom {
+  position: relative;
+}
+.form-cart-bottom input {
+  width: 100%;
+  height: 50px;
   border: none;
   font-size: 14px;
   line-height: 20px;
   border-bottom: 1px solid #8E80A9;
   background: rgba(255, 255, 255, 0);
   font-family: "Geometria", sans-serif;
+  outline: none;
 }
-.block-recording form input[type=text]::-webkit-input-placeholder {
+.form-cart-bottom input::-webkit-input-placeholder {
   color: rgba(142, 128, 169, 0.4);
 }
-.block-recording form input[type=text]::-moz-placeholder {
+.form-cart-bottom input::-moz-placeholder {
   color: rgba(142, 128, 169, 0.4);
 }
-.block-recording form input[type=text]:-ms-input-placeholder {
+.form-cart-bottom input:-ms-input-placeholder {
   color: rgba(142, 128, 169, 0.4);
 }
-.block-recording form input[type=text]::-ms-input-placeholder {
+.form-cart-bottom input::-ms-input-placeholder {
   color: rgba(142, 128, 169, 0.4);
 }
-.block-recording form input[type=text]::placeholder {
+.form-cart-bottom input::placeholder {
   color: rgba(142, 128, 169, 0.4);
 }
-.block-recording form input[type=submit] {
+.form-cart-bottom input.error {
+  color: #E65C7B;
+  border-bottom: 1px solid #E65C7B;
+}
+.form-cart-bottom label.error {
+  position: absolute;
+  width: 100%;
+  bottom: -15px;
+  left: 0;
+  font-size: 12px;
+  color: #E65C7B;
+}
+.form__button {
   width: 250px;
-  height: 56px;
+  padding: 18px;
   margin-top: 35px;
   border: none;
   font-size: 14px;
@@ -733,6 +754,9 @@ button {
   color: #FFFFFF;
   background: #E65C7B;
   font-family: "Geometria", sans-serif;
+}
+.form__button:hover {
+  background: #8E80A9;
 }
 .form-block-contacts {
   display: none;
@@ -1320,6 +1344,50 @@ button {
     -webkit-box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
             box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
   }
+  .button-active {
+    color: #FCF8FE;
+    background: #FCF8FE;
+    -webkit-box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
+            box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
+  }
+  .block-cart-all .directions-cart {
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .block-cart-all .directions-cart img {
+    width: 250px;
+    height: 250px;
+  }
+  .block-cart-all .directions-cart .block-info-all {
+    width: 300px;
+    height: 250px;
+    padding-left: 40px;
+  }
+  .block-cart-all .directions-cart .block-info-all .info h3 {
+    margin-top: 50px;
+  }
+  .block-cart-all .directions-cart .block-info-all .info p {
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  .block-cart-all .directions-cart .rec {
+    height: 250px;
+    padding-top: 120px;
+  }
+  .block-cart-all .all-button {
+    margin-top: 30px;
+  }
+  .block-cart-all .all-button .block-button {
+    margin: 0 auto;
+  }
   .subscriptions {
     width: 100%;
     height: 397px;
@@ -1538,33 +1606,30 @@ button {
     font-size: 30px;
     line-height: 40px;
   }
-  .block-recording form {
+  .block-recording .free-lesson {
     height: 260px;
   }
-  .block-recording form input[type=text] {
+  .form-cart-bottom {
+    margin: 0 auto;
+  }
+  .form-cart-bottom input {
     width: 407px;
     height: 56px;
-    margin: 0 auto;
     border: none;
     font-size: 14px;
     line-height: 20px;
     border-bottom: 1px solid #8E80A9;
     background: rgba(255, 255, 255, 0);
     font-family: "Geometria", sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .block-recording form input[type=submit] {
+  .form__button {
     width: 407px;
-    border: none;
     margin: 0 auto;
     margin-top: 57px;
     font-size: 14px;
     line-height: 20px;
-    color: #FFFFFF;
-    background: #E65C7B;
-    font-family: "Geometria", sans-serif;
-  }
-  .block-recording form input[type=submit]:hover {
-    background: #8E80A9;
   }
   .footer-block {
     padding-top: 75px;
@@ -1851,6 +1916,25 @@ button {
     height: 48px;
     font-size: 12px;
     line-height: 20px;
+  }
+  .block-cart-all {
+    display: block;
+  }
+  .block-cart-all .directions-cart {
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .block-cart-all .directions-cart img {
+    width: 250px;
+    height: 250px;
   }
   .subscriptions {
     width: 100%;
