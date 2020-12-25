@@ -22,12 +22,15 @@
   display: flex;
   justify-content: space-between;
 
-  .date {
+  .subscriptions-date {
     display: block;
     color: @color-red;
+    cursor: pointer;
   }
 }
-
+.block-timetable {
+  display: none;
+}
 .timetable {
   margin-top: 35px;
 
@@ -88,6 +91,14 @@
       }
     }
   }
+}
+
+.period-selection {
+  border-bottom: 1px solid @color-red;
+}
+
+.active {
+  display: block;
 }
 
 @media @tablet-widths {

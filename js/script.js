@@ -84,14 +84,114 @@ $(document).ready(function () {
 	});
 	waypoints[0].options.offset = -1;
 
-	// Модальное окно
+	// Модальное окно навигации
 
-	$('.left-block').on('click', function () { 
+	$('.left-block').on('click', function () {
 		$('.nav-modal').addClass('show-block');
-		$('.modal-overlay').addClass('show-block')
+		$('.modal-overlay').addClass('show-block');
 	});
 	$('.nav-modal__close').on('click', function () {
 		$('.nav-modal').removeClass('show-block');
 		$('.modal-overlay').removeClass('show-block');
 	});
+	$('.nav-modal__text').on('click', function () {
+		$('.nav-modal').removeClass('show-block');
+		$('.modal-overlay').removeClass('show-block');
+	});
+
+
+	// Форма отправки заявки
+
+	$('.order').on('click', function (evt) {
+		$('.intro-modal').addClass('show-block');
+		$('.modal-overlay').addClass('show-block');
+	});
+	$('.modal-form__close').on('click', function (evt) {
+		$('.intro-modal').removeClass('show-block');
+		$('.modal-overlay').removeClass('show-block');
+	});
+
+	jQuery.validator.addMethod("checkMask", function (value, element) {
+		return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
+	});
+	
+	$('.modal-form').validate({
+		rules: {
+			fname: {
+				required: true,
+				minlength: 2
+			},
+			fmail: {
+				required: true,
+				email: true
+			},
+			fphone: {
+				required: true,
+				checkMask: true
+			}
+		},
+		messages: {
+			fname: {
+				required: "Это поле обязательно",
+				minlength: "Введите не менее 2-х символов в поле 'Имя'"
+			},
+			fmail: {
+				required: "Это поле обязательно",
+				email: "Необходим формат адреса email"
+			},
+			fphone: {
+				required: "Это поле обязательно",
+				checkMask: "Введите полный номер телефона"
+			},
+			fcheckbox: {
+				required: "Необходимо Ваше согласие"
+			}
+		}
+	});
+	$('#phone').mask("+7(999)999-9999", {
+		autoclear: false
+	});
+	
 });
+
+// Абонементы переключатель
+
+let subscriptionsDate = document.querySelectorAll('.subscriptions-date');
+for (let i = 0; i < subscriptionsDate.length; i++) {
+	let btnItem = subscriptionsDate[0];
+	btnItem.classList.add('period-selection'); //period-selection
+};
+
+let timeTable = document.querySelectorAll('.block-timetable');
+for (let i = 0; i < timeTable.length; i++) {
+	let cart = timeTable[0];
+	cart.classList.add('active');
+};
+let catCarts = [];
+for (let i = 0; i < timeTable.length; i++) {
+	let newsCart = timeTable[i];
+	catCarts.push(newsCart)
+}
+
+let addThumbnailClickBtn = function (itemButton, newsCart) {
+	itemButton.addEventListener('click', function (e) {
+		let target = e.target;
+
+		for (let i = 0; i < subscriptionsDate.length; i++) {
+			let item = subscriptionsDate[i];
+			item.classList.remove('period-selection')
+		}
+		target.classList.add('period-selection');
+
+		for (let i = 0; i < timeTable.length; i++) {
+			let cart = timeTable[i];
+			cart.classList.remove('active')
+
+		}
+		newsCart.classList.add('active')
+	});
+};
+
+for (let i = 0; i < subscriptionsDate.length; i++) {
+	addThumbnailClickBtn(subscriptionsDate[i], catCarts[i]);
+}
