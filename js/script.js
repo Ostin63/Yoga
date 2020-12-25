@@ -245,8 +245,8 @@ for (let i = 0; i < blockDescription.length; i++) {
 }
 
 let addThumbnailClick = function (itemButton, newsCart) {
-	itemButton.addEventListener('click', function (e) {
-		
+	itemButton.addEventListener('click', function (event) {
+		event.preventDefault();
 		newsCart.classList.add('show-block');
 		modalOverlay.classList.add('show-block');
 	});
