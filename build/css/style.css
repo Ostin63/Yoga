@@ -884,39 +884,39 @@ button {
   padding: 60px 20px 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 1px 0px 47px -3px #bcbcbc;
-          box-shadow: 1px 0px 47px -3px #bcbcbc;
+  -webkit-box-shadow: 1px 0px 47px -3px #8E80A9;
+          box-shadow: 1px 0px 47px -3px #8E80A9;
   background: #FFFFFF;
 }
 .intro-modal .intro-modal__block .intro-modal__title,
 .intro-modal .intro-modal__block .intro-modal__text {
   text-align: center;
 }
-.intro-modal .intro-modal__block .modal-form {
+.modal-form {
   text-align: center;
 }
-.intro-modal .intro-modal__block .modal-form .form-cart {
+.modal-form .form-cart {
   position: relative;
   margin-bottom: 20px;
 }
-.intro-modal .intro-modal__block .modal-form .form-cart input {
+.modal-form .form-cart input {
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #8E80A9;
   outline: none;
 }
-.intro-modal .intro-modal__block .modal-form .form-cart input.error {
+.modal-form .form-cart input.error {
   color: #E65C7B;
   border-bottom: 1px solid #E65C7B;
 }
-.intro-modal .intro-modal__block .modal-form .form-cart label.error {
+.modal-form .form-cart label.error {
   position: absolute;
   width: 100%;
-  bottom: -15px;
+  bottom: -20px;
   left: 0;
   font-size: 12px;
   color: #E65C7B;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__button {
+.modal-form__button {
   margin-top: 30px;
   padding: 15px 35px;
   color: #FFFFFF;
@@ -924,20 +924,20 @@ button {
   border: none;
   outline: none;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__button:hover,
-.intro-modal .intro-modal__block .modal-form .modal-form__button:focus {
+.modal-form__button:hover,
+.modal-form__button:focus {
   background: #E65C7B;
-  -webkit-box-shadow: 0px 0px 10px 0px #00000075;
-          box-shadow: 0px 0px 10px 0px #00000075;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(142, 128, 169, 0.2);
+          box-shadow: 0px 0px 10px 0px rgba(142, 128, 169, 0.2);
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__button:active {
+.modal-form__button:active {
   -webkit-box-shadow: 0px 0px 10px 0px #FFFFFF;
           box-shadow: 0px 0px 10px 0px #FFFFFF;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__checkbox {
+.modal-form__checkbox {
   position: relative;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__checkbox label {
+.modal-form__checkbox label {
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
@@ -946,15 +946,15 @@ button {
           user-select: none;
   margin-left: 10px;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__checkbox #fcheckbox-error {
+.modal-form__checkbox #fcheckbox-error {
   position: absolute;
   bottom: -15px;
   font-size: 12px;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__checkbox input {
+.modal-form__checkbox input {
   position: relative;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__checkbox input::before {
+.modal-form__checkbox input::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -965,10 +965,10 @@ button {
   opacity: 1;
   z-index: 2;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__checkbox input:checked::before {
+.modal-form__checkbox input:checked::before {
   opacity: 0;
 }
-.intro-modal .intro-modal__block .modal-form .modal-form__checkbox input::after {
+.modal-form__checkbox input::after {
   content: "";
   position: absolute;
   top: -3px;
@@ -1016,22 +1016,12 @@ button {
 }
 .modal-form__close:hover,
 .modal-form__close:focus {
-  -webkit-box-shadow: 1px -1px 13px -1px #bcbcbc;
-          box-shadow: 1px -1px 13px -1px #bcbcbc;
+  -webkit-box-shadow: 1px -1px 13px -1px #8E80A9;
+          box-shadow: 1px -1px 13px -1px #8E80A9;
 }
 .modal-form__close:active {
-  -webkit-box-shadow: 0px 0px 15px -4px #bcbcbc;
-          box-shadow: 0px 0px 15px -4px #bcbcbc;
-}
-.modal-form__close::before {
-  width: 25px;
-  top: 13px;
-  left: 3px;
-}
-.modal-form__close::after {
-  width: 25px;
-  top: 13px;
-  left: 3px;
+  -webkit-box-shadow: 0px 0px 15px -4px #8E80A9;
+          box-shadow: 0px 0px 15px -4px #8E80A9;
 }
 .modal-answer {
   position: fixed;
@@ -1654,7 +1644,7 @@ button {
     width: 640px;
     padding: 120px 40px;
   }
-  .intro-modal .intro-modal__block .modal-form {
+  .modal-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1664,17 +1654,27 @@ button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .intro-modal .intro-modal__block .modal-form .form-cart input {
+  .modal-form .form-cart input {
     width: 144px;
   }
-  .intro-modal .intro-modal__block .modal-form .modal-form__checkbox {
+  .modal-form__checkbox {
     margin-top: 45px;
   }
-  .intro-modal .intro-modal__block .modal-form .modal-form__checkbox input + label::before {
+  .modal-form__checkbox input + label::before {
     left: -10px;
   }
-  .intro-modal .intro-modal__block .modal-form .modal-form__checkbox input + label::after {
+  .modal-form__checkbox input + label::after {
     left: -10px;
+  }
+  .modal-form__close::before {
+    width: 25px;
+    top: 13px;
+    left: 3px;
+  }
+  .modal-form__close::after {
+    width: 25px;
+    top: 13px;
+    left: 3px;
   }
   .modal-answer {
     left: calc(50% - 764px/2);
@@ -2125,24 +2125,24 @@ button {
     width: 1165px;
     padding: 200px 150px;
   }
-  .intro-modal .intro-modal__block .modal-form .form-cart input {
+  .modal-form .form-cart input {
     width: 220px;
   }
-  .intro-modal .intro-modal__block .modal-form .modal-form__checkbox {
+  .modal-form__checkbox {
     margin-top: 45px;
   }
-  .intro-modal .intro-modal__block .modal-form .modal-form__checkbox input {
+  .modal-form__checkbox input {
     background: #91aa59;
   }
-  .intro-modal .intro-modal__block .modal-form__close {
+  .modal-form__close {
     width: 35px;
     height: 35px;
   }
-  .intro-modal .intro-modal__block .modal-form__close::before {
+  .modal-form__close::before {
     width: 30px;
     top: 15px;
   }
-  .intro-modal .intro-modal__block .modal-form__close::after {
+  .modal-form__close::after {
     width: 30px;
     top: 15px;
   }
