@@ -339,7 +339,31 @@ button {
   padding-top: 52px;
 }
 .block-cart-button {
-  display: none;
+  width: 250px;
+  height: 32px;
+  margin-top: 30px;
+  font-size: 10px;
+  line-height: 20px;
+  color: #8E80A9;
+  font-family: "Geometria", sans-serif;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+          box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+  cursor: pointer;
+}
+.block-cart-button:hover {
+  -webkit-box-shadow: 0px 4px 25px rgba(30, 1, 82, 0.2);
+          box-shadow: 0px 4px 25px rgba(30, 1, 82, 0.2);
+}
+.block-cart-button:active {
+  -webkit-box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
+          box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
+}
+.button-active {
+  color: #FCF8FE;
+  background: #FCF8FE;
+  -webkit-box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
+          box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
 }
 .block-cart-all {
   display: none;
@@ -1003,6 +1027,7 @@ button {
   position: absolute;
   bottom: -15px;
   font-size: 12px;
+  color: #E65C7B;
 }
 .modal-form__checkbox input {
   position: relative;
@@ -1355,29 +1380,6 @@ button {
     width: 350px;
     height: 32px;
     margin-left: 25px;
-    display: block;
-    font-size: 10px;
-    line-height: 20px;
-    color: #8E80A9;
-    font-family: "Geometria", sans-serif;
-    background: #FFFFFF;
-    -webkit-box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
-            box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
-    cursor: pointer;
-  }
-  .block-cart-button:hover {
-    -webkit-box-shadow: 0px 4px 25px rgba(30, 1, 82, 0.2);
-            box-shadow: 0px 4px 25px rgba(30, 1, 82, 0.2);
-  }
-  .block-cart-button:active {
-    -webkit-box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
-            box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
-  }
-  .button-active {
-    color: #FCF8FE;
-    background: #FCF8FE;
-    -webkit-box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
-            box-shadow: 0px 4px 25px rgba(173, 171, 177, 0.2);
   }
   .block-cart-all .directions-cart {
     width: 550px;
@@ -1791,7 +1793,7 @@ button {
     left: calc(50% - 764px/2);
   }
   .modal-answer .modal-answer__block {
-    width: 640px;
+    width: 628px;
     padding: 120px 40px;
   }
 }
@@ -2285,5 +2287,13 @@ button {
   .modal-form__close::after {
     width: 30px;
     top: 15px;
+  }
+  .modal-answer {
+    left: calc(50% - 1456px/2);
+  }
+  .modal-answer .modal-answer__block {
+    width: 900px;
+    padding: 150px 100px;
+    margin: 0 auto;
   }
 }

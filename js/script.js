@@ -98,11 +98,14 @@ $(document).ready(function () {
 		$('.nav-modal').removeClass('show-block');
 		$('.modal-overlay').removeClass('show-block');
 	});
+
 	// Направления
 	
 	$('.button-top').on('click', function () {
 		$('.block-cart-all').addClass('show-block');
 		$('.button-top').addClass('button-active');
+		$('.li-button').removeClass('tracked');
+		$('.all-button').addClass('tracked');
 	});
 	$('.block-button').on('click', function () {
 		$('.block-cart-all').removeClass('show-block');
@@ -154,6 +157,15 @@ $(document).ready(function () {
 			},
 			fcheckbox: {
 				required: "Необходимо Ваше согласие"
+			}
+		},
+		errorPlacement: function (error, element) {
+			error.insertAfter(element.parent());
+		},
+		submitHandler: function () {
+			//let setok = document.getElementById("setok");
+			if (element.value == '') {
+				$('.modal-answer').addClass('show-block');
 			}
 		}
 	});
