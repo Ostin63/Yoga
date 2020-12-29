@@ -4,7 +4,6 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
-gulpfile.js
 package-lock.json
 node_modules/
 dist/
@@ -17,7 +16,7 @@ dist/
 
 # Log files
 *.log
-
+debug.log
 # Package files
 *.jar
 

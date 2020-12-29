@@ -25,22 +25,27 @@
 .modal-form {
   text-align: center;
 
-  .form-cart {
-    position: relative;
-    margin-bottom: 20px;
+}
 
-    input {
-      border: none;
-      border-bottom: 1px solid @color-lilac;
-      outline: none;
+.form-cart {
+  position: relative;
+  margin-bottom: 20px;
 
-      &.error {
-        color: @color-red;
-        border-bottom: 1px solid @color-red;
-      }
+  input {
+    border: none;
+    border-bottom: 1px solid @color-lilac;
+    outline: none;
+
+    &.error {
+      color: @color-red;
+      border-bottom: 1px solid @color-red;
     }
 
-    label.error {
+
+  }
+
+  label {
+    &.error {
       position: absolute;
       width: 100%;
       bottom: -20px;
@@ -50,6 +55,10 @@
     }
   }
 }
+
+
+
+
 
 .modal-form__button {
   margin-top: 30px;

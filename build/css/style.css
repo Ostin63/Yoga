@@ -972,20 +972,20 @@ button {
 .modal-form {
   text-align: center;
 }
-.modal-form .form-cart {
+.form-cart {
   position: relative;
   margin-bottom: 20px;
 }
-.modal-form .form-cart input {
+.form-cart input {
   border: none;
   border-bottom: 1px solid #8E80A9;
   outline: none;
 }
-.modal-form .form-cart input.error {
+.form-cart input.error {
   color: #E65C7B;
   border-bottom: 1px solid #E65C7B;
 }
-.modal-form .form-cart label.error {
+.form-cart label.error {
   position: absolute;
   width: 100%;
   bottom: -20px;

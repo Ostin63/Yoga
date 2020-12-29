@@ -470,23 +470,19 @@
         <h2 class="intro-modal__title">Хочешь записаться на занятие?</h2>
         <p class="intro-modal__text">Оставьте контакты и наши менеджеры
           свяжуться в ближайшее время</p>
-        <form class="modal-form" action="#" method="post" enctype="multipart/form-data">
+        <form class="modal-form" action="/" method="post" enctype="multipart/form-data">
           <div class="modal-form__phone form-cart">
-            <label class="visually-hidden" for="phone">Телефон</label>
             <input type="text" id="phone" placeholder="Телефон" name="fphone" required>
           </div>
           <div class="modal-form__name form-cart">
-            <label class="visually-hidden" for="name">Имя</label>
             <input type="text" id="name" placeholder="Имя" name="fname" required>
           </div>
           <div class="modal-form__mail form-cart">
-            <label class="visually-hidden" for="email">E-mail</label>
             <input type="text" id="email" placeholder="E-mail" name="fmail" required>
           </div>
           <div class="modal-form__checkbox">
             <input type="checkbox" id="checkbox" name="fcheckbox" checked required>
-            <label for="checkbox">Я согласен на обработку
-              персональных данных</label>
+            <label for="checkbox">Я согласен на обработку персональных данных</label>
           </div>
           <input class="modal-form__button" type="submit" value="Записатьтся">
         </form>
@@ -1441,11 +1437,9 @@
             <h2>Запишитесь на бесплатное пробное занятие</h2>
             <form class="free-lesson" action="/" method="post" enctype="multipart/form-data">
               <div class="form__name form-cart-bottom">
-                <label class="visually-hidden" for="name-bottom">Ваше имя</label>
                 <input type="text" id="name-bottom" placeholder="Ваше имя" name="fbname" required>
               </div>
               <div class="form__phone form-cart-bottom">
-                <label class="visually-hidden" for="phone-bottom">Телефон</label>
                 <input type="text" id="phone-bottom" placeholder="Телефон" name="fbphone" required>
               </div>
               <input class="btn form__button" type="submit" value="Оставить заявку">

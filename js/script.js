@@ -158,15 +158,6 @@ $(document).ready(function () {
 			fcheckbox: {
 				required: "Необходимо Ваше согласие"
 			}
-		},
-		errorPlacement: function (error, element) {
-			error.insertAfter(element.parent());
-		},
-		submitHandler: function () {
-			//let setok = document.getElementById("setok");
-			if (element.value == '') {
-				$('.modal-answer').addClass('show-block');
-			}
 		}
 	});
 
@@ -207,19 +198,18 @@ $(document).ready(function () {
 let subscriptionsDate = document.querySelectorAll('.subscriptions-date');
 for (let i = 0; i < subscriptionsDate.length; i++) {
 	let btnItem = subscriptionsDate[0];
-	btnItem.classList.add('period-selection'); //period-selection
+	btnItem.classList.add('period-selection');
 };
 
 let timeTable = document.querySelectorAll('.block-timetable');
+
+let catCarts = [];
 for (let i = 0; i < timeTable.length; i++) {
 	let cart = timeTable[0];
 	cart.classList.add('active');
-};
-let catCarts = [];
-for (let i = 0; i < timeTable.length; i++) {
 	let newsCart = timeTable[i];
 	catCarts.push(newsCart)
-}
+};
 
 let addThumbnailClickBtn = function (itemButton, newsCart) {
 	itemButton.addEventListener('click', function (e) {
