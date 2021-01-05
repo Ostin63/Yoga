@@ -201,14 +201,11 @@ for (let i = 0; i < subscriptionsDate.length; i++) {
 	btnItem.classList.add('period-selection');
 };
 
-let timeTable = document.querySelectorAll('.block-timetable');
+let timeTables = document.querySelectorAll('.block-timetable');
 
-let catCarts = [];
-for (let i = 0; i < timeTable.length; i++) {
-	let cart = timeTable[0];
+for (let i = 0; i < timeTables.length; i++) {
+	let cart = timeTables[0];
 	cart.classList.add('active');
-	let newsCart = timeTable[i];
-	catCarts.push(newsCart)
 };
 
 let addThumbnailClickBtn = function (itemButton, newsCart) {
@@ -221,8 +218,8 @@ let addThumbnailClickBtn = function (itemButton, newsCart) {
 		}
 		target.classList.add('period-selection');
 
-		for (let i = 0; i < timeTable.length; i++) {
-			let cart = timeTable[i];
+		for (let i = 0; i < timeTables.length; i++) {
+			let cart = timeTables[i];
 			cart.classList.remove('active')
 
 		}
@@ -231,18 +228,18 @@ let addThumbnailClickBtn = function (itemButton, newsCart) {
 };
 
 for (let i = 0; i < subscriptionsDate.length; i++) {
-	addThumbnailClickBtn(subscriptionsDate[i], catCarts[i]);
+	addThumbnailClickBtn(subscriptionsDate[i], timeTables[i]);
 }
 
 	// Описание направлений
 	
 let recButton = document.querySelectorAll('.rec');
-let blockDescription = document.querySelectorAll('.block-description');
+let descriptionBlocks = document.querySelectorAll('.block-description');
 let modalOverlay = document.querySelector('.modal-overlay');
 
 let infoCarts = [];
-for (let i = 0; i < blockDescription.length; i++) {
-	let newsCart = blockDescription[i];
+for (let i = 0; i < descriptionBlocks.length; i++) {
+	let newsCart = descriptionBlocks[i];
 	infoCarts.push(newsCart)
 }
 
