@@ -84,8 +84,6 @@ $(document).ready(function () {
 	});
 	waypoints[0].options.offset = -1;
 
-	// Модальное окно навигации
-
 	let onModalClose = function (evt) {
 		evt.preventDefault();
 		$('.show-block').removeClass('show-block');
@@ -98,14 +96,12 @@ $(document).ready(function () {
 		}
 	};
 
+	// Модальное окно навигации
+
 	$('.left-block').on('click', function () {
 		$('.nav-modal').addClass('show-block');
 		$('.modal-overlay').addClass('show-block');
 	});
-	/*$('.nav-modal__close').on('click', function () {
-		$('.nav-modal').removeClass('show-block');
-		$('.modal-overlay').removeClass('show-block');
-	});*/
 	$('.nav-modal__text').on('click', function () {
 		$('.nav-modal').removeClass('show-block');
 		$('.modal-overlay').removeClass('show-block');
@@ -120,7 +116,11 @@ $(document).ready(function () {
 		$('.li-button').removeClass('tracked');
 		$('.all-button').addClass('tracked');
 	});
-	$('.block-button').on('click', onModalClose);
+	$('.block-button').on('click', function () {
+		$('.block-cart-all').removeClass('show-block');
+		$('.button-top').removeClass('button-active');
+	});
+	
 
 	// Форма отправки заявки
 
@@ -128,7 +128,6 @@ $(document).ready(function () {
 		$('.intro-modal').addClass('show-block');
 		$('.modal-overlay').addClass('show-block');
 	});
-
 	$('.modal-form__close').on('click', onModalClose);
 
 	jQuery.validator.addMethod("checkMask", function (value, element) {
