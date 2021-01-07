@@ -86,18 +86,31 @@ $(document).ready(function () {
 
 	// Модальное окно навигации
 
+	let onModalClose = function (evt) {
+		evt.preventDefault();
+		$('.show-block').removeClass('show-block');
+		$('.modal-overlay').removeClass('show-block');
+		$(window).on('keydown', onEscapePress);
+	};
+	let onEscapePress = function (evt) {
+		if (evt.keyCode === 27) {
+			onModalClose(evt);
+		}
+	};
+
 	$('.left-block').on('click', function () {
 		$('.nav-modal').addClass('show-block');
 		$('.modal-overlay').addClass('show-block');
 	});
-	$('.nav-modal__close').on('click', function () {
+	/*$('.nav-modal__close').on('click', function () {
 		$('.nav-modal').removeClass('show-block');
 		$('.modal-overlay').removeClass('show-block');
-	});
+	});*/
 	$('.nav-modal__text').on('click', function () {
 		$('.nav-modal').removeClass('show-block');
 		$('.modal-overlay').removeClass('show-block');
 	});
+	$('.nav-modal__close').on('click', onModalClose);
 
 	// Направления
 	
@@ -107,10 +120,7 @@ $(document).ready(function () {
 		$('.li-button').removeClass('tracked');
 		$('.all-button').addClass('tracked');
 	});
-	$('.block-button').on('click', function () {
-		$('.block-cart-all').removeClass('show-block');
-		$('.button-top').removeClass('button-active');
-	})
+	$('.block-button').on('click', onModalClose);
 
 	// Форма отправки заявки
 
@@ -118,10 +128,8 @@ $(document).ready(function () {
 		$('.intro-modal').addClass('show-block');
 		$('.modal-overlay').addClass('show-block');
 	});
-	$('.modal-form__close').on('click', function (evt) {
-		$('.intro-modal').removeClass('show-block');
-		$('.modal-overlay').removeClass('show-block');
-	});
+
+	$('.modal-form__close').on('click', onModalClose);
 
 	jQuery.validator.addMethod("checkMask", function (value, element) {
 		return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
