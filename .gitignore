@@ -4,10 +4,10 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
-package-lock.json
-node_modules/
+.package-lock.json
+.node_modules/
 dist/
-
+.vscode/
 # Compiled Java class files
 *.class
 
@@ -16,7 +16,7 @@ dist/
 
 # Log files
 *.log
-debug.log
+.debug.log
 # Package files
 *.jar
 
@@ -49,3 +49,4 @@ Thumbs.db
 *.mov
 *.wmv
 
+node_modules
