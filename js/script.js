@@ -30,7 +30,7 @@ $(document).ready(function () {
 			}
 		]
 	});
-	$(".slider-teams").on('afterChange', function (event, slick, currentSlide) {
+	$(".slider-teams").on('afterChange', function (evt, slick, currentSlide) {
 		$(".counter").html(currentSlide + 1 + " &sol; ");
 		$(".counter-sub").html(slick.slideCount);
 	});

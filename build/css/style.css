@@ -1904,7 +1904,7 @@ button {
     line-height: 15px;
   }
   .directions {
-    background: none;
+    background-image: none;
     background-image: url(../img/directions-bg-1456.png);
     background-position: 20% 0;
     background-repeat: no-repeat;
